@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "generated_utc", "student"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_utc": { "type": "string" },
+    "student": {
+      "type": "object",
+      "required": ["token", "token_hash8", "name", "group"],
+      "properties": {
+        "token": { "type": "string" },
+        "token_hash8": { "type": "string" },
+        "name": { "type": "string" },
+        "group": { "type": "string" }
+      }
+    }
+  }
+}

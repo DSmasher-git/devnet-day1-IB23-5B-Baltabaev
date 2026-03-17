@@ -1,0 +1,41 @@
+{
+  "status_code": 200,
+  "items": [
+    {
+      "id": 9000,
+      "title": "MyBook-8b19095c",
+      "author": "Baltabaev_Dinmukhamed",
+      "isbn": "9780000000000"
+    },
+    {
+      "id": 10000,
+      "title": "Enhanced reciprocal process improvement",
+      "author": "Baltabaev_Dinmukhamed",
+      "isbn": "978-1-121-66759-4"
+    },
+    {
+      "id": 10001,
+      "title": "Decentralized 24/7 info-mediaries",
+      "author": "Baltabaev_Dinmukhamed",
+      "isbn": "978-0-290-89274-5"
+    },
+    {
+      "id": 10002,
+      "title": "Enterprise-wide contextually-based initiative",
+      "author": "Baltabaev_Dinmukhamed",
+      "isbn": "978-0-574-11139-5"
+    },
+    {
+      "id": 10003,
+      "title": "Open-source motivating database",
+      "author": "Baltabaev_Dinmukhamed",
+      "isbn": "978-1-231-96490-3"
+    },
+    {
+      "id": 10004,
+      "title": "Optional actuating interface",
+      "author": "Baltabaev_Dinmukhamed",
+      "isbn": "978-1-204-34746-7"
+    }
+  ]
+}
