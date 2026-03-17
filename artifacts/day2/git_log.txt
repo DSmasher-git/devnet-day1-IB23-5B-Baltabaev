@@ -1,0 +1,16 @@
+*   f15b096 (HEAD -> main) Resolve README conflict (Day2)
+|\  
+| * 083c375 (origin/feature/day2-readme-B, feature/day2-readme-B) Day2 README B
+* |   bb743a9 Merge branch 'feature/day2-readme-A' into main
+|\ \  
+| |/  
+|/|   
+| * 0ce362a (origin/feature/day2-readme-A, feature/day2-readme-A) Day2 README A
+* | 5c91692 (origin/main) Merge pull request #1 from DSmasher-git/feature/day2-dataformats
+|\| 
+| * 4fa1302 (origin/feature/day2-dataformats, feature/day2-dataformats) Day2 data formats script + schema + tests
+|/  
+* 710b617 Add Day 1 report
+* 3501b43 Day1 completed
+* b4879c9 Add gitignore
+* fbc09f8 Initial project structure
