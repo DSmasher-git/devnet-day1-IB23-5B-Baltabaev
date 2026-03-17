@@ -1,0 +1,17 @@
+{
+  "computed": {
+    "title_len": 18
+  },
+  "student": {
+    "group": "IB23-5B",
+    "name": "Baltabaev_Dinmukhamed",
+    "token": "D1-IB-23-5b-03-0D9E",
+    "token_hash8": "8b19095c"
+  },
+  "todo": {
+    "completed": false,
+    "id": 1,
+    "title": "delectus aut autem",
+    "userId": 1
+  }
+}
