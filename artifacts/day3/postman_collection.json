@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "Day3 Library API",
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "description": "Postman collection for Day3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Books",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/books",
+          "host": ["{{base_url}}"],
+          "path": ["books"]
+        }
+      }
+    },
+    {
+      "name": "Add Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-KEY",
+            "value": "{{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 77777,\n  \"title\": \"Postman Book\",\n  \"author\": \"Baltabaev_Dinmukhamed\",\n  \"isbn\": \"9781234567890\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/books",
+          "host": ["{{base_url}}"],
+          "path": ["books"]
+        }
+      }
+    },
+    {
+      "name": "Delete Book",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/books/77777",
+          "host": ["{{base_url}}"],
+          "path": ["books", "77777"]
+        }
+      }
+    }
+  ]
+}
