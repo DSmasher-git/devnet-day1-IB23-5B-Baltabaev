@@ -1,0 +1,5 @@
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS                    NAMES
+d79cb0d97f89        sampleapp:day4      "python app.py"          3 minutes ago       Up 3 minutes                  0.0.0.0:8080->8080/tcp   intelligent_keldysh
+31b1c89f59b1        22f1d4ed8769        "python app.py"          13 minutes ago      Exited (137) 4 minutes ago                             naughty_goldwasser
+daf75e4aa21c        22f1d4ed8769        "python app.py"          15 minutes ago      Exited (137) 13 minutes ago                            recursing_pare
+90004b37b912        3c55e9115916        "/bin/sh -c 'pip ins…"   21 minutes ago      Exited (2) 20 minutes ago                              interesting_nash

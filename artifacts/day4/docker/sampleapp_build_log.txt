@@ -1,0 +1,84 @@
+Sending build context to Docker daemon  45.99MB
+Step 1/6 : FROM python:3.9-slim
+ ---> 085da638e1b8
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 2af557bec11a
+Step 3/6 : COPY . .
+ ---> b3c01dbd0c88
+Step 4/6 : RUN pip install --no-cache-dir --progress-bar off -r requirements.txt
+ ---> Running in fabe1b289fff
+Collecting requests
+  Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Collecting pytest
+  Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+Collecting jsonschema
+  Downloading jsonschema-4.25.1-py3-none-any.whl (90 kB)
+Collecting PyYAML
+  Downloading pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (750 kB)
+Collecting flask
+  Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+Collecting idna<4,>=2.5
+  Downloading idna-3.11-py3-none-any.whl (71 kB)
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+Collecting charset_normalizer<4,>=2
+  Downloading charset_normalizer-3.4.6-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (207 kB)
+Collecting pygments>=2.7.2
+  Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Collecting tomli>=1
+  Downloading tomli-2.4.0-py3-none-any.whl (14 kB)
+Collecting exceptiongroup>=1
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Collecting packaging>=20
+  Downloading packaging-26.0-py3-none-any.whl (74 kB)
+Collecting iniconfig>=1
+  Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Collecting pluggy<2,>=1.5
+  Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Collecting jsonschema-specifications>=2023.03.6
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Collecting referencing>=0.28.4
+  Downloading referencing-0.36.2-py3-none-any.whl (26 kB)
+Collecting rpds-py>=0.7.1
+  Downloading rpds_py-0.27.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (384 kB)
+Collecting attrs>=22.2.0
+  Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+Collecting werkzeug>=3.1.0
+  Downloading werkzeug-3.1.6-py3-none-any.whl (225 kB)
+Collecting itsdangerous>=2.2.0
+  Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Collecting click>=8.1.3
+  Downloading click-8.1.8-py3-none-any.whl (98 kB)
+Collecting importlib-metadata>=3.6.0
+  Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Collecting markupsafe>=2.1.1
+  Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Collecting blinker>=1.9.0
+  Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Collecting jinja2>=3.1.2
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Collecting typing-extensions>=4.6.0
+  Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Collecting zipp>=3.20
+  Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+Installing collected packages: zipp, urllib3, typing-extensions, tomli, rpds-py, PyYAML, pygments, pluggy, packaging, markupsafe, itsdangerous, iniconfig, idna, click, charset_normalizer, certifi, blinker, attrs, werkzeug, requests, referencing, jinja2, importlib-metadata, exceptiongroup, pytest, jsonschema-specifications, flask, jsonschema
+Successfully installed PyYAML-6.0.3 attrs-25.4.0 blinker-1.9.0 certifi-2026.2.25 charset_normalizer-3.4.6 click-8.1.8 exceptiongroup-1.3.1 flask-3.1.3 idna-3.11 importlib-metadata-8.7.1 iniconfig-2.1.0 itsdangerous-2.2.0 jinja2-3.1.6 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 markupsafe-3.0.3 packaging-26.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2 referencing-0.36.2 requests-2.32.5 rpds-py-0.27.1 tomli-2.4.0 typing-extensions-4.15.0 urllib3-2.6.3 werkzeug-3.1.6 zipp-3.23.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91m
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+[0mRemoving intermediate container fabe1b289fff
+ ---> 095bd5321816
+Step 5/6 : EXPOSE 8080
+ ---> Running in 215a8ebfdc66
+Removing intermediate container 215a8ebfdc66
+ ---> 23244dc2a271
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in 5f1f42319cbc
+Removing intermediate container 5f1f42319cbc
+ ---> 22f1d4ed8769
+Successfully built 22f1d4ed8769
+Successfully tagged sampleapp:day4

@@ -1,0 +1,5 @@
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+sampleapp           day4                6a5047d2b5a7        5 minutes ago       194MB
+<none>              <none>              22f1d4ed8769        17 minutes ago      194MB
+<none>              <none>              3c55e9115916        21 minutes ago      164MB
+python              3.9-slim            085da638e1b8        4 months ago        122MB
