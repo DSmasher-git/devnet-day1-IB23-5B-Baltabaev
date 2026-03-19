@@ -1,0 +1,2 @@
+CONTAINER ID                                                       IMAGE                                                                     COMMAND             CREATED             STATUS              PORTS                    NAMES
+b538b02eb2e1bdf171e7f8a39a225151ebe641516ae12391ea784817296df66b   sha256:6a5047d2b5a77d1128b0a3c61fa81e1d5eb4f7b0362e67993adaed4bbccb806e   "python app.py"     About an hour ago   Up About an hour    0.0.0.0:8080->8080/tcp   funny_noether

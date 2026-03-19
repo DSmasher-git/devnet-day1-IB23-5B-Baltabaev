@@ -3,3 +3,5 @@ pytest
 jsonschema
 PyYAML
 flask
+Faker
+

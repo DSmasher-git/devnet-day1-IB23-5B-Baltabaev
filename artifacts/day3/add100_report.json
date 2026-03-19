@@ -1,4 +1,5 @@
 {
-  "requested": 100,
-  "added": 100
+  "count_requested": 100,
+  "added_ok": 100,
+  "added_fail": 0
 }

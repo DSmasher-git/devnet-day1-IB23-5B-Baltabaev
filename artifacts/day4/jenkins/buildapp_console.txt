@@ -1,0 +1,33 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /home/devasc/.jenkins/workspace/BuildAppJob
+[BuildAppJob] $ /bin/sh -xe /tmp/jenkins15071769874128367770.sh
++ cd /home/devasc/Desktop/devnet-day1-Baltabaev
++ docker stop sampleapp
+sampleapp
++ docker rm sampleapp
+sampleapp
++ docker build -t sampleapp:day4 docker_app/
+Sending build context to Docker daemon  3.072kB
+Step 1/5 : FROM python:3.10-slim
+ ---> f2d628de8a5f
+Step 2/5 : WORKDIR /app
+ ---> Using cache
+ ---> 2ac5abf64237
+Step 3/5 : COPY . .
+ ---> Using cache
+ ---> 9eea4b466e4b
+Step 4/5 : RUN pip install --no-cache-dir --progress-bar off flask
+ ---> Using cache
+ ---> 434cc060d5a7
+Step 5/5 : CMD ["python", "app.py"]
+ ---> Using cache
+ ---> 9b17a1bbc9ee
+Successfully built 9b17a1bbc9ee
+Successfully tagged sampleapp:day4
++ docker run -d -p 8081:8080 --env-file .env --name sampleapp sampleapp:day4
+a411d3854ee2ce0ad064ca8c531a2774a1c40e1459b3134ee25255c6121f0566
++ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                  PORTS                    NAMES
+a411d3854ee2        sampleapp:day4      "python app.py"     1 second ago        Up Less than a second   0.0.0.0:8081->8080/tcp   sampleapp
+Finished: SUCCESS

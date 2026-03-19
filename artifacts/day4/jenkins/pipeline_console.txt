@@ -1,0 +1,39 @@
+Started by user admin
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /home/devasc/.jenkins/workspace/SamplePipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Preparation)
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] sh
++ docker stop sampleapp
+sampleapp
+[Pipeline] sh
++ docker rm sampleapp
+sampleapp
+[Pipeline] }
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] build
+Scheduling project: BuildAppJob
+Starting building: BuildAppJob #3
+Build BuildAppJob #3 completed: SUCCESS
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Results)
+[Pipeline] build
+Scheduling project: TestAppJob
+Starting building: TestAppJob #2
+Build TestAppJob #2 completed: SUCCESS
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

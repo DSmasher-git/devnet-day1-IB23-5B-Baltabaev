@@ -1,0 +1,9 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /home/devasc/.jenkins/workspace/TestAppJob
+[TestAppJob] $ /bin/sh -xe /tmp/jenkins5058706421553721042.sh
++ grep TOKEN_HASH8=
++ curl -s http://0.0.0.0:8081
+Hello Day4 | TOKEN_HASH8=b00c4a82
++ exit 0
+Finished: SUCCESS

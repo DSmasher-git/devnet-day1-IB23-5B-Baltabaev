@@ -3,6 +3,7 @@ import os
 import json
 import hashlib
 import argparse
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -30,7 +31,8 @@ def token_hash8(token: str) -> str:
 
 
 def save_json(path, data):
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+    text = json.dumps(data, indent=2, ensure_ascii=False) + "\n"
+    path.write_text(text, encoding="utf-8")
 
 
 def main():
@@ -62,21 +64,25 @@ def main():
         })
 
         # GET with params
-        r2 = s.get(f"{API}/api/v1/books",
-                   params={"includeISBN": "true", "sortBy": "author"})
+        r2 = s.get(
+            f"{API}/api/v1/books",
+            params={"includeISBN": "true", "sortBy": "author"}
+        )
         save_json(ART / "books_sorted_isbn.json", {
             "status_code": r2.status_code,
             "items": r2.json()
         })
 
-        # Login
-        login = s.post(f"{API}/api/v1/loginViaBasic",
-                       auth=(LOGIN, PASSWORD))
+        # LOGIN
+        login = s.post(
+            f"{API}/api/v1/loginViaBasic",
+            auth=(LOGIN, PASSWORD)
+        )
         token_api = login.json()["token"]
 
-        # Add unique book
+        # UNIQUE BOOK
         my_book = {
-            "id": 9000,
+            "id": int(time.time()),
             "title": f"MyBook-{th8}",
             "author": name,
             "isbn": "9780000000000"
@@ -93,14 +99,17 @@ def main():
             "status_code": r3.status_code
         })
 
-        # Add 100 books
+        # ADD 100 BOOKS
         fake = Faker()
-        added = 0
+        added_ok = 0
+        added_fail = 0
 
-        for i in range(args.count):
+        start_id = int(time.time())
+
+        for i in range(start_id, start_id + args.count):
             book = {
-                "id": 10000 + i,
-                "title": fake.catch_phrase(),
+                "id": i,
+                "title": f"{fake.catch_phrase()} [{th8}]",
                 "author": name,
                 "isbn": fake.isbn13()
             }
@@ -112,25 +121,34 @@ def main():
             )
 
             if resp.status_code == 200:
-                added += 1
+                added_ok += 1
+            else:
+                added_fail += 1
+                print(f"FAIL: id={i} status={resp.status_code}")
 
+        # REPORT (ВАЖНО: правильные поля!)
         save_json(ART / "add100_report.json", {
-            "requested": args.count,
-            "added": added
+            "count_requested": args.count,
+            "added_ok": added_ok,
+            "added_fail": added_fail
         })
 
-        # Books by author
-        r4 = s.get(f"{API}/api/v1/books",
-                   params={"author": name,
-                           "includeISBN": "true",
-                           "sortBy": "id"})
+        # VERIFY
+        r4 = s.get(
+            f"{API}/api/v1/books",
+            params={
+                "author": name,
+                "includeISBN": "true",
+                "sortBy": "id"
+            }
+        )
 
         save_json(ART / "books_by_me.json", {
             "status_code": r4.status_code,
             "items": r4.json()
         })
 
-    # Summary
+    # SUMMARY
     summary = {
         "schema_version": SCHEMA_VERSION,
         "generated_utc": now(),

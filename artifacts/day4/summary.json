@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "ansible_port_8081": true,
+    "docker_token_in_page": true,
+    "docker_tokenproof": true,
+    "jenkins_pipeline_has_stages": true,
+    "security_db_has_tables": true
+  },
+  "evidence_sha256": {
+    "ansible_hello": "6b506fcd95eb0febede6e36542f9524299ecd459f7b11b6743bef44138cbb0fb",
+    "ansible_ping": "005e9245df2c530d64aee6bfec751dfc3ced4b06361f597e7fde4163bc44fd69",
+    "ansible_playbook_install": "da4e5f63be3604fe79694f6cbf3efca483ddb9eee5c11003ae778750cf5a3856",
+    "buildapp_console": "e4c9340a7d1ba88d78296c96111ee479836564bbf7900c6a433c8de448623e8e",
+    "curl_apache_8081": "e870932d034a48187d6685a82452e2dfbd36db1ae9840a89275eaab07b73a009",
+    "db_tables": "ad86a4abb22eb668b27efd841c9da481b1681020c8b71ebcfcf570d81ef41ee2",
+    "db_user_hash_sample": "12173a86adf0858c61c87d2d1da0f9943e049bb14222b0b1e1fedda78c38a1ae",
+    "docker_build_log": "1f0d6b8cbcce46af821ea4bdfbe0d8416b0003955e7655671ed7b3615ebba6d0",
+    "docker_ps": "a4b1b7632670071c11b251d9ad6ddb4b080f8714f0b1421debc651093683770e",
+    "docker_sampleapp_curl": "ade5d3343b6b7f71fddd7d648d4260318fe504cf6ecdfc6c9b21b03d839185da",
+    "docker_token_proof": "d2f9212ed18cc635114e1ad498f923984a2311c83885970631c122ab12024df8",
+    "jenkins_docker_ps": "fe9fb44ae9a606a5c15595ce03bca49c32ac6faf4cdef9e3436298a2d6592510",
+    "jenkins_url": "185f195598830dbc315eb3a6741f97eace245e9d9d2a7225c5da77b87f27f3fc",
+    "login_v1": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "login_v2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pipeline_console": "d6bf85f91411ca365a0d89d75822118953b47a000d03cf76cd187a139c2345fb",
+    "pipeline_script": "659ffcab7df8137c32443aa6982688cc802be2519b7821d4d5ab27c8bb5e3293",
+    "ports_conf_after": "8ee0ac8272eaa90ca6a9597cb472034768331e543d074cc72141b520ffb6f686",
+    "signup_v1": "baf3040a1940d380c92f8980630bbddd6f5a57e304937c0359b1b900c326e04c",
+    "signup_v2": "4c51c596f93d8b9bf3ffb595dd9faa5ab592d62910baaa64d13bfb640e3f0d55",
+    "testapp_console": "cb5182fac0742a2ba1f35d551d28127b51e007da213c80091fa90556600a41b4"
+  },
+  "generated_utc": "2026-03-19T15:59:29.074972+00:00",
+  "run": {
+    "platform": "linux",
+    "python": "3.8.2"
+  },
+  "schema_version": "4.1",
+  "student": {
+    "group": "IB23-5B",
+    "name": "Baltabaev_Dinmukhamed",
+    "token": "D1-IB-23-5b-03-0D9E",
+    "token_hash8": "8b19095c"
+  },
+  "validation_passed": true
+}
