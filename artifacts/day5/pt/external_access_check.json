@@ -1,0 +1,8 @@
+{
+  "response": {
+    "detail": "Security Authentication Failure",
+    "errorCode": "REST_API_EXTERNAL_ACCESS",
+    "message": "Ticket-based authorization: empty ticket."
+  },
+  "version": "1.0"
+}

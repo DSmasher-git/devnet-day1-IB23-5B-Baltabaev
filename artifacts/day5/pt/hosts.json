@@ -1,0 +1,90 @@
+{
+    "response": [
+        {
+            "connectedAPMacAddress": "",
+            "connectedAPName": "",
+            "connectedInterfaceName": "GigabitEthernet1/0/24",
+            "connectedNetworkDeviceIpAddress": "192.168.102.2",
+            "connectedNetworkDeviceName": "SWL2",
+            "hostIp": "192.168.102.3",
+            "hostMac": "00E0.F96C.155B",
+            "hostName": "PC4",
+            "hostType": "Pc",
+            "id": "PTT08108MO8-uuid",
+            "lastUpdated": "2020-06-11 13:00:56",
+            "pingStatus": "FAILURE"
+        },
+        {
+            "connectedAPMacAddress": "",
+            "connectedAPName": "",
+            "connectedInterfaceName": "GigabitEthernet1/0/24",
+            "connectedNetworkDeviceIpAddress": "10.0.1.5",
+            "connectedNetworkDeviceName": "SWR4",
+            "hostIp": "10.0.2.130",
+            "hostMac": "0004.9A42.C245",
+            "hostName": "PC3",
+            "hostType": "Pc",
+            "id": "",
+            "lastUpdated": "2020-06-11 13:00:56",
+            "pingStatus": "FAILURE"
+        },
+        {
+            "connectedAPMacAddress": "",
+            "connectedAPName": "",
+            "connectedInterfaceName": "GigabitEthernet1/0/22",
+            "connectedNetworkDeviceIpAddress": "10.0.1.4",
+            "connectedNetworkDeviceName": "SWR3",
+            "hostIp": "10.0.1.129",
+            "hostMac": "00E0.A330.3359",
+            "hostName": "PC1",
+            "hostType": "Pc",
+            "id": "PTT0810P5BP-uuid",
+            "lastUpdated": "2020-06-12 01:52:07",
+            "pingStatus": "SUCCESS"
+        },
+        {
+            "connectedAPMacAddress": "",
+            "connectedAPName": "",
+            "connectedInterfaceName": "GigabitEthernet1/0/23",
+            "connectedNetworkDeviceIpAddress": "10.0.1.5",
+            "connectedNetworkDeviceName": "SWR4",
+            "hostIp": "10.0.2.129",
+            "hostMac": "0060.47C1.A4DB",
+            "hostName": "PC2",
+            "hostType": "Pc",
+            "id": "PTT0810KZYD-uuid",
+            "lastUpdated": "2020-06-11 18:01:52",
+            "pingStatus": "SUCCESS"
+        },
+        {
+            "connectedAPMacAddress": "",
+            "connectedAPName": "",
+            "connectedInterfaceName": "GigabitEthernet1/0/21",
+            "connectedNetworkDeviceIpAddress": "10.0.1.4",
+            "connectedNetworkDeviceName": "SWR3",
+            "hostIp": "10.0.1.130",
+            "hostMac": "0050.0FCE.B095",
+            "hostName": "Admin",
+            "hostType": "Pc",
+            "id": "PTT0810F20H-uuid",
+            "lastUpdated": "2020-06-12 01:52:07",
+            "pingStatus": "SUCCESS"
+        },
+        {
+            "connectedAPMacAddress": "",
+            "connectedAPName": "",
+            "connectedInterfaceName": "GigabitEthernet1/0/3",
+            "connectedNetworkDeviceIpAddress": "192.168.101.2",
+            "connectedNetworkDeviceName": "SWL1",
+            "hostIp": "192.168.101.100",
+            "hostMac": "000A.413D.D793",
+            "hostName": "Example Server",
+            "hostType": "Server",
+            "id": "PTT08101YE9-uuid",
+            "lastUpdated": "2020-06-11 13:00:56",
+            "pingStatus": "FAILURE"
+        }
+    ],
+    "version": "1.0"
+}
+

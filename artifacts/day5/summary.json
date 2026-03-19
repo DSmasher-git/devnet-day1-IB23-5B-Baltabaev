@@ -1,0 +1,31 @@
+{
+  "schema_version": "5.0",
+  "generated_at": "2026-03-19T18:25:52.418809+00:00",
+  "student": {
+    "token": "D1-IB-23-5b-03-0D9E",
+    "token_hash8": "8b19095c",
+    "name": "Baltabaev_Dinmukhamed",
+    "group": "IB23-5B"
+  },
+  "yang": {
+    "ok": true,
+    "pyang_tree_has_interfaces": true,
+    "yang_file_exists": true,
+    "evidence_sha": "949de5d3ee156508fe0af9f6a93bb6b16cf3e397ba9f6ba226e1c50bb5256edb"
+  },
+  "webex": {
+    "ok": true,
+    "room_title_contains_hash8": true,
+    "message_text_contains_hash8": true,
+    "evidence_sha": "75d1b4f12f496b1adca5a58eb02df81abd6599aa42c153259aa293350c0bbfc8"
+  },
+  "pt": {
+    "ok": true,
+    "empty_ticket_seen": true,
+    "ticket_saved": true,
+    "network_devices_ok": true,
+    "hosts_ok": true,
+    "evidence_sha": "9ffcbcbc5e18333fe85ae5c994076acb791120773730bb9dd8aa8569954f9395"
+  },
+  "validation_passed": true
+}

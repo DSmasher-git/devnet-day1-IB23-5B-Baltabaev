@@ -1,0 +1,22 @@
+serviceTicket: NC-146-fee1745eeb5642daab2d-nbi
+
+--- Network Devices ---
+  hostname=SWL1  ip=192.168.101.2  type=MultiLayerSwitch
+  hostname=R1  ip=192.168.1.2  type=Router
+  hostname=R3  ip=192.168.2.1  type=Router
+  hostname=SWR1  ip=10.0.1.2  type=MultiLayerSwitch
+  hostname=SWR2  ip=10.0.1.3  type=MultiLayerSwitch
+  hostname=R2  ip=192.168.2.2  type=Router
+  hostname=SWL2  ip=192.168.102.2  type=MultiLayerSwitch
+  hostname=SWR4  ip=10.0.1.5  type=MultiLayerSwitch
+  hostname=SWR3  ip=10.0.1.4  type=MultiLayerSwitch
+
+--- Hosts ---
+  hostName=PC4  hostIp=192.168.102.3  hostMac=00E0.F96C.155B
+  hostName=PC3  hostIp=10.0.2.130  hostMac=0004.9A42.C245
+  hostName=PC1  hostIp=10.0.1.129  hostMac=00E0.A330.3359
+  hostName=PC2  hostIp=10.0.2.129  hostMac=0060.47C1.A4DB
+  hostName=Admin  hostIp=10.0.1.130  hostMac=0050.0FCE.B095
+  hostName=Example Server  hostIp=192.168.101.100  hostMac=000A.413D.D793
+
+Done.
