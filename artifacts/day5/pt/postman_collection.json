@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "PT Controller REST API — Day5",
+    "_postman_id": "day5-pt-controller",
+    "description": "Packet Tracer SDN Controller REST API — Activity 8.8.3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Get Service Ticket",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"netadmin\",\n  \"password\": \"Admin_1234!\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/ticket",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "ticket"]
+        }
+      }
+    },
+    {
+      "name": "2. GET Network Devices",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "X-Auth-Token", "value": "{{serviceTicket}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/network-device",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "network-device"]
+        }
+      }
+    },
+    {
+      "name": "3. GET Hosts",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "X-Auth-Token", "value": "{{serviceTicket}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/host",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "host"]
+        }
+      }
+    },
+    {
+      "name": "0. Check External Access (no ticket)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/host",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "host"]
+        }
+      }
+    }
+  ]
+}

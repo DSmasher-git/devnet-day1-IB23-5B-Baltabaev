@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Day5Summary",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "student",
+    "yang",
+    "webex",
+    "pt",
+    "validation_passed"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "5.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "student": {
+      "type": "object",
+      "required": ["token", "token_hash8", "name", "group"],
+      "properties": {
+        "token":       { "type": "string" },
+        "token_hash8": { "type": "string", "minLength": 8, "maxLength": 8 },
+        "name":        { "type": "string" },
+        "group":       { "type": "string" }
+      }
+    },
+    "yang": {
+      "type": "object",
+      "required": ["ok", "pyang_tree_has_interfaces", "yang_file_exists", "evidence_sha"],
+      "properties": {
+        "ok":                        { "type": "boolean" },
+        "pyang_tree_has_interfaces": { "type": "boolean" },
+        "yang_file_exists":          { "type": "boolean" },
+        "evidence_sha":              { "type": "string" }
+      }
+    },
+    "webex": {
+      "type": "object",
+      "required": ["ok", "room_title_contains_hash8", "message_text_contains_hash8", "evidence_sha"],
+      "properties": {
+        "ok":                          { "type": "boolean" },
+        "room_title_contains_hash8":   { "type": "boolean" },
+        "message_text_contains_hash8": { "type": "boolean" },
+        "evidence_sha":                { "type": "string" }
+      }
+    },
+    "pt": {
+      "type": "object",
+      "required": ["ok", "empty_ticket_seen", "ticket_saved", "network_devices_ok", "hosts_ok", "evidence_sha"],
+      "properties": {
+        "ok":                 { "type": "boolean" },
+        "empty_ticket_seen":  { "type": "boolean" },
+        "ticket_saved":       { "type": "boolean" },
+        "network_devices_ok": { "type": "boolean" },
+        "hosts_ok":           { "type": "boolean" },
+        "evidence_sha":       { "type": "string" }
+      }
+    },
+    "validation_passed": {
+      "type": "boolean"
+    }
+  }
+}
